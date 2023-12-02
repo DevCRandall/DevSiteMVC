@@ -2,6 +2,66 @@
     ViewData["Title"] = "Home Page";
 }
 
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center flex-column mb-3 justify-content-between">
+
+        <h1 class="logo"><a href="index.html">DevChristopherRandall</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="~/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                <li><a class="nav-link scrollto" href="#work">Work</a></li>
+                <li><a class="nav-link scrollto" href="#api">api</a></li>
+                <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
+                <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                  <ul>
+                    <li><a href="#">Drop Down 1</a></li>
+                    <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                      <ul>
+                        <li><a href="#">Deep Drop Down 1</a></li>
+                        <li><a href="#">Deep Drop Down 2</a></li>
+                        <li><a href="#">Deep Drop Down 3</a></li>
+                        <li><a href="#">Deep Drop Down 4</a></li>
+                        <li><a href="#">Deep Drop Down 5</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Drop Down 2</a></li>
+                    <li><a href="#">Drop Down 3</a></li>
+                    <li><a href="#">Drop Down 4</a></li>
+                  </ul>
+                </li> -->
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
+                <li><a class="bi bi-download" href="/~/assets/documents/ChrisRandall-Resume-2023.pdf" download="ChrisRandall-Resume-2023.pdf"><button class="btn btn-secondary btn-sm">Download Resume <i class="bi bi-download"></i> </button></a></li>
+
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<!-- ======= Hero Section ======= -->
+<div id="hero" class="hero route bg-image">
+    <div id="hero" class="hero route">
+        <div class="overlay-itro"></div>
+        <div class="hero-content display-table">
+            <div class="table-cell">
+                <div class="container">
+                    <!--<p class="display-6 color-d">Hello, world!</p>-->
+                    <h1 class="hero-title mb-4">I am Chris Randall</h1>
+                    <p class="hero-subtitle"><span class="typed" data-typed-items="Full Stack Developer, Network Technician, IT Professional, My Mom's Favorite"></span></p>
+                    <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End Hero Section -->
+
 <main id="main">
 
     <!-- ======= About Section ======= -->
@@ -146,6 +206,7 @@
         </div>
     </section>
     <!-- End Services Section -->
+
     <!-- #region counter -->
     <!-- ======= Counter Section ======= -->
     <!-- <div class="section-counter paralax-mf bg-image" style="background-image: url(~/assets/img/counters-bg.jpg)">
@@ -201,6 +262,7 @@
     </div> -->
     <!-- End Counter Section -->
     <!-- #endregion counter -->
+
     <!-- ======= Portfolio Section ======= -->
     <section id="work" class="portfolio-mf sect-pt4 route">
         <div class="container">
@@ -344,6 +406,7 @@
             </div>
         </div>
     </section><!-- End Portfolio Section -->
+
     <!-- ======= Testimonials Section ======= -->
     <div class="testimonials paralax-mf bg-image">
         <!-- <div class="overlay-mf"></div> -->
@@ -457,11 +520,12 @@
     </article>
 
     <!-- End Weather API-->
+
     <!-- ======= Resume ======= -->
     <section id="resume" class=" text-center m-5 route">
         <div class="container">
 
-            <embed src="/~/assets/documents/ChrisRandall-Resume-2023.pdf" type="application/pdf" width="1000" height="1000" class="pt-5">
+            <embed src="~/assets/documents/ChrisRandall-Resume-2023.pdf" type="application/pdf" width="1000" height="1000" class="pt-5">
 
         </div>
     </section>
@@ -482,7 +546,7 @@
                                         </h5>
                                     </div>
                                     <div>
-                                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                                        <form action="Contact" method="post" role="form" class="php-email-form">
                                             <div class="row">
                                                 <div class="col-md-12 mb-3">
                                                     <div class="form-group">
@@ -550,3 +614,9 @@
     </section><!-- End Contact Section -->
 
 </main><!-- End #main -->
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
